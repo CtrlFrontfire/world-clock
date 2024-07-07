@@ -3,29 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="source/style.css" />
     <title>World clock</title>
   </head>
   <body>
     <div class="container">
       <h1>World clock</h1>
-      <select name="" id="">
+      <select name="" id="" class="select">
         <option value="">Select a city</option>
         <option value="">London</option>
         <option value="">Athens</option>
         <option value="">Porto</option>
       </select>
-
-      <div class="city">
-        <h2>New York</h2>
-        <div class="date">July 7th 2024</div>
-        <div class="time">20:50:15 PM</div>
-      </div>
-      <div class="city">
-        <h2>Los Angeles</h2>
-        <div class="date">July 7th 2024</div>
-        <div class="time">20:50:15 PM</div>
+      <div class="display-cities">
+        <div class="cities-one">
+          <div class="city">
+            <div>
+              <h2>New York</h2>
+              <div class="date">July 7th 2024</div>
+            </div>
+            <div class="time">20:50:15 <small>PM</small></div>
+          </div>
+          <div class="city">
+            <div>
+              <h2>Los Angeles</h2>
+              <div class="date">July 7th 2024</div>
+            </div>
+            <div class="time">20:50:15 <small>PM</small></div>
+          </div>
+        </div>
+        <div class="cities-two">
+          <div class="city">
+            <div>
+              <h2>Tokyo</h2>
+              <div class="date">July 7th 2024</div>
+            </div>
+            <div class="time">20:50:15 <small>PM</small></div>
+          </div>
+          <div class="city">
+            <div>
+              <h2>Cairo</h2>
+              <div class="date">July 7th 2024</div>
+            </div>
+            <div class="time">20:50:15 <small>PM</small></div>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
