@@ -15,32 +15,37 @@ h1 {
 h2 {
   font-size: 20px;
   letter-spacing: 1px;
-  margin: 0;
+  margin: 5px 0px 0px 0px;
   padding: 0 10px;
 }
 select {
   background-color: transparent;
-  border: 1px solid #48dce994;
+  border: 1px solid rgba(72, 220, 233, 0.58);
   border-radius: 4px;
   color: #48dce994;
   display: block;
   font-size: 17px;
   margin: 20px 0;
   padding: 10px;
-  transition: all 150ms ease-in-out;
+  transition: all 140ms ease-in-out;
   width: 100%;
 }
 select:hover {
   cursor: pointer;
 }
-footer {
-  color: white;
-  opacity: 80%;
-  text-align: center;
+a {
+  color: #1d5d80;
+  font-weight: bold;
+  transition: all 140ms ease-in-out;
 }
+a:hover {
+  cursor: pointer;
+  text-shadow: 0 0 1.2em #ffff, 0 0 0.2em #ffff;
+}
+
 .container {
-  background-color: rgba(24, 24, 24, 0.452);
-  border-radius: 7px;
+  background-color: rgba(24, 24, 24, 0.45);
+  border-radius: 5px;
   box-shadow: rgba(72, 220, 233, 0.568) 0px 10px 29px 0px;
   color: white;
   max-width: 600px;
@@ -48,35 +53,52 @@ footer {
   padding: 40px;
 }
 .display-cities {
-  display: block;
-  margin: 10px auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 15px auto 10px auto;
 }
 
-.cities-one,
-.cities-two {
-  display: flex;
-  margin: 0 auto;
-}
 .city {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10px;
-  width: 300px;
+  padding: 5px 5px;
+  margin: 2px;
+  border: 1px dashed rgba(72, 220, 233, 0.2);
+  border-radius: 7px;
+  background: rgba(24, 24, 24, 0.45);
 }
 .date {
   font-size: 14px;
   letter-spacing: 0.5px;
+  margin-bottom: 5px;
   opacity: 0.7;
   padding: 0 10px;
 }
 .time {
   font-size: 26px;
   font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding-left: 10px;
 }
 .time small {
   font-size: 14px;
-  vertical-align: middle;
   padding-right: 10px;
+}
+footer {
+  background: rgba(24, 74, 78, 0.33);
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 74px 40px rgba(24, 74, 78, 0.38);
+  -moz-box-shadow: 0px 0px 74px 40px rgba(24, 74, 78, 0.38);
+  box-shadow: 0px 0px 74px 40px rgba(24, 74, 78, 0.38);
+  color: #ffff;
+  display: block;
+  margin: 10px auto 0;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 17px;
+  max-width: 60%;
+  opacity: 75%;
+  text-align: center;
 }
