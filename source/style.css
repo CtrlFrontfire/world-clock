@@ -27,7 +27,7 @@ select {
   font-size: 17px;
   margin: 20px 0;
   padding: 10px;
-  transition: all 140ms ease-in-out;
+  transition: all 150ms ease-in-out;
   width: 100%;
 }
 select:hover {
@@ -36,11 +36,11 @@ select:hover {
 a {
   color: #48dce994;
   font-weight: bold;
-  transition: all 140ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 a:hover {
   cursor: pointer;
-  text-shadow: 0 0 1.2em #ffff, 0 0 0.2em #ffff;
+  text-shadow: 0 0 1em #ffffff7a, 0 0 0.1em #ffffff7c;
 }
 
 .container {
@@ -66,7 +66,7 @@ a:hover {
   margin: 2px;
   border: 1px dashed rgba(72, 220, 233, 0.2);
   border-radius: 7px;
-  background: rgba(24, 24, 24, 0.225);
+  background: rgba(24, 24, 24, 0.45);
 }
 .date {
   font-size: 14px;
@@ -87,18 +87,16 @@ a:hover {
   padding-right: 10px;
 }
 footer {
-  background: rgba(24, 74, 78, 0.33);
-  border-radius: 50px;
-  -webkit-box-shadow: 0px 0px 74px 40px rgba(24, 74, 78, 0.38);
-  -moz-box-shadow: 0px 0px 74px 40px rgba(24, 74, 78, 0.38);
-  box-shadow: 0px 0px 74px 40px rgba(24, 74, 78, 0.38);
+  background: rgba(72, 187, 233, 0.233);
+  border-radius: 10px;
+  box-shadow: rgba(72, 187, 233, 0.274) 0px 0px 55px 35px;
   color: #ffff;
   display: block;
-  margin: 10px auto 0;
+  margin: auto;
   padding: 10px;
   font-family: monospace;
-  font-size: 17px;
-  max-width: 60%;
-  opacity: 75%;
+  font-size: 15px;
+  opacity: 95%;
   text-align: center;
+  width: 600px;
 }
