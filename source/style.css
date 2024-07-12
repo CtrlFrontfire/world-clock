@@ -37,6 +37,9 @@ select {
   width: 100%;
 }
 select:hover {
+  background: rgba(0, 0, 0, 0.877);
+  color: #48dce994;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 a {
@@ -118,7 +121,6 @@ a:hover {
 .time small {
   font-size: 14px;
   padding-right: 10px;
-  position: ;
 }
 footer {
   background: rgba(72, 187, 233, 0.233);
