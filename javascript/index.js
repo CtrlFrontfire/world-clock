@@ -74,6 +74,7 @@ function updateSelectionCity(event) {
       "hh:mm:ss"
     )}<small>${cityTime.format("A")}</small></div>
   </div>
+  <a href="/" class="return-to-select-link">Select another city...</ a>
   `;
 }
 
