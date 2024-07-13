@@ -61,7 +61,7 @@ setInterval(updateTime, 1000);
 
 function updateSelectionCity(event) {
   let cityTimeZone = event.target.value;
-  let cityName = cityTimeZone.split("/")[1];
+  let cityName = cityTimeZone..replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let userCityElement = document.querySelector("#user-city-selection");
   userCityElement.innerHTML = `
