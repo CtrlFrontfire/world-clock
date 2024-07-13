@@ -44,9 +44,6 @@ function updateTime() {
   );
 }
 
-updateTime();
-setInterval(updateTime, 1000);
-
 function updateUserSelectionTime() {
   let phoenixElement = document.querySelector("#phoenix");
   let phoenixDateElement = phoenixElement.querySelector(".user-date");
@@ -59,30 +56,30 @@ function updateUserSelectionTime() {
   );
 }
 
-updateUserSelectionTime();
-setInterval(updateUserSelectionTime, 1000);
+updateTime();
+setInterval(updateTime, 1000);
 
-function updateCity(event) {
+function updateSelectionCity(event) {
   let cityTimeZone = event.target.value;
   let cityName = cityTimeZone.split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
-
-  let userCitySelectionElement = document.querySelector("#user-city-selection");
-  userCitySelectionElement.innerHTML = `
+  let userCityElement = document.querySelector("#user-city-selection");
+  userCityElement.innerHTML = `
   <div class="user-city">
-      <div>
-        <h2>${cityName}</h2>
-        <div class="user-date">${cityTime.format("ddd Do MMMM YYYY")}</div>
-      </div>
-      <div class="user-time" id="user-time">${cityTime.format(
-        "hh:mm:ss"
-      )} <small>${cityTime.format("A")}</small></div>
+    <div>
+      <h2>${cityName}</h2>
+      <div class="user-date">${cityTime.format("ddd Do MMM YYYY")}</div>
+    </div>
+    <div class="user-time" id="user-time">${cityTime.format(
+      "hh:mm:ss"
+    )}<small>${cityTime.format("A")}</small></div>
   </div>
   `;
 }
 
+let userCitySelectElement = document.querySelector("#city");
+
+userCitySelectElement.addEventListener("change", updateSelectionCity);
+
 updateTime();
 setInterval(updateTime, 1000);
-
-let citiesSelectElement = document.querySelector("#city");
-citiesSelectElement.addEventListener(`change`, updateCity);
