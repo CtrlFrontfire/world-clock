@@ -42,9 +42,9 @@ function updateTime() {
   cairoTimeElement.innerHTML = cairoTime.format(
     "hh:mm:ss [<small>]A[</small>]"
   );
-}
 
-function updateUserSelectionTime() {
+  // Phoenix
+
   let phoenixElement = document.querySelector("#phoenix");
   let phoenixDateElement = phoenixElement.querySelector(".user-date");
   let phoenixTimeElement = phoenixElement.querySelector(".user-time");
@@ -56,12 +56,12 @@ function updateUserSelectionTime() {
   );
 }
 
-updateTime();
-setInterval(updateTime, 1000);
-
 function updateSelectionCity(event) {
   let cityTimeZone = event.target.value;
-  let cityName = cityTimeZone..replace("_", " ").split("/")[1];
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let userCityElement = document.querySelector("#user-city-selection");
   userCityElement.innerHTML = `
@@ -77,9 +77,8 @@ function updateSelectionCity(event) {
   `;
 }
 
-let userCitySelectElement = document.querySelector("#city");
-
-userCitySelectElement.addEventListener("change", updateSelectionCity);
-
 updateTime();
 setInterval(updateTime, 1000);
+
+let userCitySelectElement = document.querySelector("#city");
+userCitySelectElement.addEventListener("change", updateSelectionCity);

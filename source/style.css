@@ -79,12 +79,18 @@ a:hover {
   padding: 0 10px;
 }
 .user-time {
-  font-size: 28px;
+  display: flex;
+  font-size: 30px;
   font-weight: bold;
-  padding-right: 10px;
   letter-spacing: 2px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: 0 5px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 170px;
+}
+.user-time small {
+  font-size: 18px;
 }
 .display-cities {
   display: grid;
